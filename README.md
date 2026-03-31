@@ -2,17 +2,17 @@
 
 ## Team Members
 1. Caleb Rivers
-2. Emmy Nguyen
-3. Catherine Lusick
-4. Diyaa Patel
+2. Emmy Nguyen (https://github.com/emmyn1)
+3. Catherine Lusick (https://github.com/cl95728)
+5. Diyaa Patel
 
-## Scenario Description
+## Project Description
 
-This project models a music industry database designed to track artists, albums, songs, record labels, contracts, and revenue generated through streaming and unit sales. 
-
-Managers can use the system to assess artist performance, identify high-performing genres and locations, and make strategic choices about talent acquisition, contract management, and marketing. 
+The purpose of this database is to represent a music group that releases songs and albums from various artists signed to different subsidiary record labels. This project models a music industry database designed to track artists, albums, songs, record labels, contracts, and revenue generated through streaming and unit sales, with artists as the primary entity since their products provide the source of revenue. Managers can use the system to assess artist performance, identify high-performing genres and locations, and make strategic choices about talent acquisition, contract management, and marketing. By querying the database, our team seeks to demonstrate that our database is dependable and valuable for assisting the executive team in understanding the present operations of the music group, while also confirming its capability to support decisions regarding the firm's future. 
 
 ## Data Model
+
+
 
 ## Explanation of Data Model 
 
@@ -44,3 +44,4 @@ The database includes entities like Artist, Album, Song, Record Label, Contract,
 6. ?
 
 ## Database Information
+Name of the database: al_Group_21482_G5
