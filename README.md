@@ -22,6 +22,10 @@ Record Label represents the subsidiary for what each artist is signed to. Its pu
 
 Location represents the relevant areas that contain producers, record labels, and artists. Because none of these entities can have more than one location, the entity has no foreign keys. A location's state, city, and ZIP code is represented in the model. 
 
+The Artist is the core entity and has the most amount of relations with other entities in the database. The attributes of an artist include their unique idenitifier, stage and legal name, the date of their first album release, age, and foreign keys connecting them to location and record label because record labels and locations can have multiple artists. 
+
+The Album is a grouping of songs released at ine time, and are used to fulfill contracts by the artists. Albums have their unique identifier, and are described by their name and release date. They have foreign keys linking them to artist and units sold because artists can have multiple albums, and multiple albums can have the same amount of units sold. 
+
 - Each Artist has a single Record Label and a single Location
 - An Artist may put out more than one Album
 - There are several Songs on each Album
