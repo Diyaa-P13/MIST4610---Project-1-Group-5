@@ -12,6 +12,8 @@ The purpose of this database is to represent a music group that releases songs a
 
 ## Data Model
 
+<img width="610" height="609" alt="Screenshot 2026-03-31 at 11 45 10 AM" src="https://github.com/user-attachments/assets/94599c69-c22a-4616-bd59-91f27dc95c18" />
+
 
 
 ## Explanation of Data Model 
