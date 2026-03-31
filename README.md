@@ -135,67 +135,58 @@ Location represents the relevant areas that contain producers, record labels, an
 
 Query 1 retrieves album names and release dates for a specific artist by filtering the Album table using the artist’s ID. It provides a simple view of the artist’s discography. This query gives management quick access to an artist’s portfolio of work and track their release history. Understanding an artist’s output is important for planning future releases and activities. It also provides an idea of an artist’s content production and an overview of their career progression. 
 
-
-
-
 2. Which songs are the most popular based on streaming?
 
-Query 2  retrieves song titles and their total stream counts by joining the Song and Stream Total tables. It ranks songs in descending order and returns the top 10 most-streamed tracks. This query allows management to have a better understanding of which songs are currently the most popular among listeners. High streaming numbers indicate strong audience engagement and can guide the company’s promotion decisions. The results can also be utilized to maximize revenues from streaming platforms. 
-
-
+Query 2 retrieves song titles and their total stream counts by joining the Song and Stream Total tables. It ranks songs in descending order and returns the top 10 most-streamed tracks. This query allows management to have a better understanding of which songs are currently the most popular among listeners. High streaming numbers indicate strong audience engagement and can guide the company’s promotion decisions. The results can also be utilized to maximize revenues from streaming platforms. 
 
 3. Which albums have sold above 9,000,000 streams?
 
 Query 3 retrieves album names and total units sold by joining Album and Unit Total tables. It filters for albums exceeding 9,000,000 units and orders them from highest to lowest sales. This query helps management identify which albums are performing well in terms of sales volume. By focusing on high-selling albums, the label can prioritize its resources for the successful projects. This insight can guide future investment strategies and production decisions.
-
-
-
  
 4. Which hip hop feature has the most streams?
 
+This query is meant to identify which hip hop group feature generates the largest number of streams. Some groups have multiple collaborations, so for more accurate results, the total streams earned by each group are divided by the number of songs they have in the database. As shown in the results, J Cole and Trey Songz have garnered the most streams per song, so it would be wise to get both artists back into the studio to produce another hit. Additionally, JID’s features make up most of the top 50%, so he seems to work well with other artists. Lastly, Kendrick Lamar’s features tend to lack streams, so maybe the label should encourage him to stick to solo work. 
 
+5. Where should we look for new talents? (Which location generates the most revenue)
 
+This query is meant to give insight on which cities generate the most revenue per artist. By joining many tables across the database, we can attach revenue values to all of the locations in our database. Additionally, dividing by artist creates less skewed data, as the cities with more artists will not be overrepresented. As seen in the results, Chapel Hill, Duluth, Houston, and Charleston have shown massive returns for their respective artists, so perhaps the culture and connections these artists can create in their cities can allow for similar artists from their area to develop and follow in their footsteps. Therefore, more resources should be given to talent scouts and local development in those areas. 
 
-5. Which record label has released the most albums
+6. Do pre or post 2000s albums generate the most sales?
+
+This query displays the dichotomy of the revenue generated from albums before and after the year 2000. By using the UNION command, we can observe both calculations side by side. REGEXP was used to distinguish between albums made before and after the turn of the millennium. The results state that pre-2000s albums still have generated more money per album on average than post 2000s albums. This should alert management that they need to keep these albums available for purchase and to not phase them out. It would also be wise to renew contracts of artists that made music in the 1900s, as they not only drove up sales, but they have a positive reputation amongst the public. This isn’t to say that newer artists should not be prioritized, as their sales numbers are very close to those of the older albums, however management should not ignore the lasting impact that older works have created. 
+
+7. Which record label has released the most albums?
 
 This query calculates the total number of albums released by each record label by joining the Album, Artist, and Record Label tables. It organizes the data by record label and counts the number of albums linked to each label, and then it arranges the results in descending order. This query assists management in determining which record labels are generating the most albums. Being able to identify which label is effectively, provides insight into overall label performance and market presence. This data can help make decisions about investments, resource distribution, and collaborations with successful labels.
 
-
-
-
-6. Where should we look for new talents? (Which location generates the most revenue)
-
-
-
-
-7. Do pre or post 2000s albums generate the most sales?
-
-
-
-
-8. Which record label has released the most albums?
-
-
-
-
-9. Which artists have more total album sales than the average total sales of all artists?
+8. Which artists have more total album sales than the average total sales of all artists?
 
 This query calculates the total album sales for each artist by joining the Artist, Album, and Unit total tables. By comparing, each artist’s total sales to the average total sales across all artists using a subquery, it returns only those artists whose sales are higher than the average. This query assists management in determining artists who are exceeding average sales performance. These insights can help make decisions regarding marketing spending, resource distribution, contract extensions, and focusing on top-performing artists within the company.
 
 
-10. Which locations have a city name that ends with "ville" (REGEX)
+9. Which locations have a city name that ends with "ville" (REGEX)?
 
+This query was created to pull a list of all cities in the Location table that ends with the letters "ville". To make the list clean and easy to read, I used a Regular Expression to find the pattern and grouped the results by city. This query helps filter through the location data more effectively. Instead of scrolling through rows of data, this helps identify specific areas based on their name. 
 
+10. Display producers who have never worked on a song in the Hip Hop genre (NOT EXISTS)
 
-
-
-11. Display producers who have never worked on a song in the Hip Hop genre (NOT EXISTS)
-
-
-
+Query 10 is designed to find the names of producers in the Producer table who have never been associated with a "Hip Hop" song. To do this, I used a NOT EXISTS subquery to filter anyone linked to that specific genre. For every producer, the subquery checks the Song Producer table to see if they are linked to any song labeled 'Hip Hop'. If the subquery finds any match, NOT EXISTS becomes false, and that producer is excluded. This logic can be used to isolate producers who work exclusively in other genres like Country or Pop. It’s a great way to find a music producer whose specialty does not fall in Hip Hop. 
 
 ## Table for Queries
 
+| Feature                   | Query 1 | Query 2 | Query 3 | Query 4 | Query 5 | Query 6 | Query 7 | Query 8 | Query 9 | Query 10 |  
+|---------------------------|---------|---------|---------|---------|---------|---------|---------|---------|---------|----------| 
+| Multiple Table Join       |         |    X    |    X    |    X    |    X    |    X    |    X    |    X    |         |     X    | 
+| Subquery                  |         |         |         |         |         |         |         |    X    |         |          | 
+| GROUP BY                  |         |         |         |         |    X    |         |    X    |    X    |         |          | 
+| GROUP BY with HAVING      |         |         |         |    X    |         |         |         |         |         |          | 
+| Multi-condition WHERE     |         |         |    X    |         |         |         |         |         |         |          | 
+| Built - in Functions      |         |    X    |    X    |    X    |    X    |    X    |    X    |    X    |         |          | 
+| REGEXP                    |         |         |         |         |         |    X    |         |         |    X    |          |  
+| NOT EXISTS                |         |         |         |         |         |         |         |         |         |     X    | 
+| WHERE Clause              |    X    |         |         |    X    |         |    X    |         |         |         |          | 
+| Basic SELECT              |    X    |         |         |    X    |    X    |    X    |         |         |         |          | 
+| Union                     |         |         |         |         |         |    X    |         |         |         |          | 
 
 ## Database Information
 Name of the database: al_Group_21482_G5
