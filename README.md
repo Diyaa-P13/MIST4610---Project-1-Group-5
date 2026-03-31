@@ -16,7 +16,11 @@ The purpose of this database is to represent a music group that releases songs a
 
 ## Explanation of Data Model 
 
-The database includes entities like Artist, Album, Song, Record Label, Contract, Producer, and Sales.
+The database includes entities like Artist, Artist Group, Album, Song, Producer, Song Producer, Producer, Record Label, Location, Total Units, Streams Total, and Sales.
+
+Record Label represents the subsidiary for what each artist is signed to. Its purpose is being the child table of location, since a location could include multiple record labels. There are also other attributes, like the album's unique identifier, its name, the city where it is based, and the year it was established. 
+
+Location represents the relevant areas that contain producers, record labels, and artists. Because none of these entities can have more than one location, the entity has no foreign keys. 
 
 - Each Artist has a single Record Label and a single Location
 - An Artist may put out more than one Album
@@ -31,17 +35,19 @@ The database includes entities like Artist, Album, Song, Record Label, Contract,
 
 ### Simple Queries 
 1. Show all the albums for a specific artist
-2. Which hip top feature has the most streams
-3. Which record label has released the most albums
-4. ?
+2. Which songs are hte most popular based on streaming?
+3. Which albums have sold above 9,000,000 streams?
+4. Which hip hop feature has the most streams?
+5. Which record label has released the most albums (mine)
 
 ### Complex Queries
-1. Top 5 artists by revenue
-2. Artists with contracts ending soon
-3. Best location for new talent
-4. Do pre or post 2000 albums generate the most sales
-5. Which artists have more total album sales than the average total sales of all artists
-6. ?
+1. Where should we look for new talents? (Which location generates the most revenue)
+2. Do pre or post 2000s albums generate the most sales?
+3. Which record label has released the most albums?
+4. Which artists have more total album sales than the average total sales of all artists? mine)
+5. Whhich locations have a city name that ends with "ville" (REGEX)
+6. Display producers who have never worked on a song in the Hip Hop genre (NOT EXISTS)
+
 
 ## Database Information
 Name of the database: al_Group_21482_G5
