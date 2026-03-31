@@ -24,7 +24,7 @@ Location represents the relevant areas that contain producers, record labels, an
 
 The Artist is the core entity and has the most amount of relations with other entities in the database. The attributes of an artist include their unique idenitifier, stage and legal name, the date of their first album release, age, and foreign keys connecting them to location and record label because record labels and locations can have multiple artists. 
 
-The Album is a grouping of songs released at ine time, and are used to fulfill contracts by the artists. Albums have their unique identifier, and are described by their name and release date. They have foreign keys linking them to artist and units sold because artists can have multiple albums, and multiple albums can have the same amount of units sold. 
+The Album is a grouping of songs released at one time, and are used to fulfill contracts by the artists. Albums have their unique identifier, and are described by their name and release date. They have foreign keys linking them to artist and units sold because artists can have multiple albums, and multiple albums can have the same amount of units sold. 
 
 - Each Artist has a single Record Label and a single Location
 - An Artist may put out more than one Album
