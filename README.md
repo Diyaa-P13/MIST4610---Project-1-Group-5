@@ -20,7 +20,7 @@ The database includes entities like Artist, Artist Group, Album, Song, Producer,
 
 Record Label represents the subsidiary for what each artist is signed to. Its purpose is being the child table of location, since a location could include multiple record labels. There are also other attributes, like the album's unique identifier, its name, the city where it is based, and the year it was established. 
 
-Location represents the relevant areas that contain producers, record labels, and artists. Because none of these entities can have more than one location, the entity has no foreign keys. 
+Location represents the relevant areas that contain producers, record labels, and artists. Because none of these entities can have more than one location, the entity has no foreign keys. A location's state, city, and ZIP code is represented in the model. 
 
 - Each Artist has a single Record Label and a single Location
 - An Artist may put out more than one Album
