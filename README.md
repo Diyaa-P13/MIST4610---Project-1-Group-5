@@ -128,22 +128,73 @@ Location represents the relevant areas that contain producers, record labels, an
 |------------|----------|------------| 
 | salesID | INT | Unique identifier for each sales record |  
 | revenueAmount | DECIMAL | Total revenue generated from sales |  
+
 ## Queries 
 
-### Simple Queries 
 1. Show all the albums for a specific artist
-2. Which songs are hte most popular based on streaming?
-3. Which albums have sold above 9,000,000 streams?
-4. Which hip hop feature has the most streams?
-5. Which record label has released the most albums (mine)
 
-### Complex Queries
-1. Where should we look for new talents? (Which location generates the most revenue)
-2. Do pre or post 2000s albums generate the most sales?
-3. Which record label has released the most albums?
-4. Which artists have more total album sales than the average total sales of all artists? mine)
-5. Whhich locations have a city name that ends with "ville" (REGEX)
-6. Display producers who have never worked on a song in the Hip Hop genre (NOT EXISTS)
+Query 1 retrieves album names and release dates for a specific artist by filtering the Album table using the artist’s ID. It provides a simple view of the artist’s discography. This query gives management quick access to an artist’s portfolio of work and track their release history. Understanding an artist’s output is important for planning future releases and activities. It also provides an idea of an artist’s content production and an overview of their career progression. 
+
+
+
+
+2. Which songs are the most popular based on streaming?
+
+Query 2  retrieves song titles and their total stream counts by joining the Song and Stream Total tables. It ranks songs in descending order and returns the top 10 most-streamed tracks. This query allows management to have a better understanding of which songs are currently the most popular among listeners. High streaming numbers indicate strong audience engagement and can guide the company’s promotion decisions. The results can also be utilized to maximize revenues from streaming platforms. 
+
+
+
+3. Which albums have sold above 9,000,000 streams?
+
+Query 3 retrieves album names and total units sold by joining Album and Unit Total tables. It filters for albums exceeding 9,000,000 units and orders them from highest to lowest sales. This query helps management identify which albums are performing well in terms of sales volume. By focusing on high-selling albums, the label can prioritize its resources for the successful projects. This insight can guide future investment strategies and production decisions.
+
+
+
+ 
+4. Which hip hop feature has the most streams?
+
+
+
+
+5. Which record label has released the most albums
+
+This query calculates the total number of albums released by each record label by joining the Album, Artist, and Record Label tables. It organizes the data by record label and counts the number of albums linked to each label, and then it arranges the results in descending order. This query assists management in determining which record labels are generating the most albums. Being able to identify which label is effectively, provides insight into overall label performance and market presence. This data can help make decisions about investments, resource distribution, and collaborations with successful labels.
+
+
+
+
+6. Where should we look for new talents? (Which location generates the most revenue)
+
+
+
+
+7. Do pre or post 2000s albums generate the most sales?
+
+
+
+
+8. Which record label has released the most albums?
+
+
+
+
+9. Which artists have more total album sales than the average total sales of all artists?
+
+This query calculates the total album sales for each artist by joining the Artist, Album, and Unit total tables. By comparing, each artist’s total sales to the average total sales across all artists using a subquery, it returns only those artists whose sales are higher than the average. This query assists management in determining artists who are exceeding average sales performance. These insights can help make decisions regarding marketing spending, resource distribution, contract extensions, and focusing on top-performing artists within the company.
+
+
+10. Which locations have a city name that ends with "ville" (REGEX)
+
+
+
+
+
+11. Display producers who have never worked on a song in the Hip Hop genre (NOT EXISTS)
+
+
+
+
+## Table for Queries
 
 
 ## Database Information
