@@ -14,8 +14,6 @@ The purpose of this database is to represent a music group that releases songs a
 
 <img width="610" height="609" alt="Screenshot 2026-03-31 at 11 45 10 AM" src="https://github.com/user-attachments/assets/94599c69-c22a-4616-bd59-91f27dc95c18" />
 
-
-
 ## Explanation of Data Model 
 
 The database includes entities like Artist, Artist Group, Album, Song, Producer, Song Producer, Producer, Record Label, Location, Total Units, Streams Total, and Sales.
@@ -135,13 +133,19 @@ Location represents the relevant areas that contain producers, record labels, an
 
 1. Show all the albums for a specific artist
 
+<img width="372" height="341" alt="Screenshot 2026-03-31 at 11 47 00 AM" src="https://github.com/user-attachments/assets/904d0f75-0346-45c5-8eae-00b35ae1b9ec" />
+
 Query 1 retrieves album names and release dates for a specific artist by filtering the Album table using the artist’s ID. It provides a simple view of the artist’s discography. This query gives management quick access to an artist’s portfolio of work and track their release history. Understanding an artist’s output is important for planning future releases and activities. It also provides an idea of an artist’s content production and an overview of their career progression. 
 
 2. Which songs are the most popular based on streaming?
 
+<img width="514" height="364" alt="Screenshot 2026-03-31 at 11 48 15 AM" src="https://github.com/user-attachments/assets/9fb79f32-e58b-44d0-80f5-d7d6cf102f0b" />
+
 Query 2 retrieves song titles and their total stream counts by joining the Song and Stream Total tables. It ranks songs in descending order and returns the top 10 most-streamed tracks. This query allows management to have a better understanding of which songs are currently the most popular among listeners. High streaming numbers indicate strong audience engagement and can guide the company’s promotion decisions. The results can also be utilized to maximize revenues from streaming platforms. 
 
 3. Which albums have sold above 9,000,000 streams?
+
+<img width="438" height="379" alt="Screenshot 2026-03-31 at 11 49 08 AM" src="https://github.com/user-attachments/assets/e973b018-4cd9-4a3c-a1f6-21c1c3fadaf2" />
 
 Query 3 retrieves album names and total units sold by joining Album and Unit Total tables. It filters for albums exceeding 9,000,000 units and orders them from highest to lowest sales. This query helps management identify which albums are performing well in terms of sales volume. By focusing on high-selling albums, the label can prioritize its resources for the successful projects. This insight can guide future investment strategies and production decisions.
  
