@@ -151,30 +151,45 @@ Query 3 retrieves album names and total units sold by joining Album and Unit Tot
  
 4. Which hip hop feature has the most streams?
 
+<img width="633" height="300" alt="Screenshot 2026-03-31 at 11 50 58 AM" src="https://github.com/user-attachments/assets/de97068d-e7ce-441f-89a4-87a12201ea11" />
+
 This query is meant to identify which hip hop group feature generates the largest number of streams. Some groups have multiple collaborations, so for more accurate results, the total streams earned by each group are divided by the number of songs they have in the database. As shown in the results, J Cole and Trey Songz have garnered the most streams per song, so it would be wise to get both artists back into the studio to produce another hit. Additionally, JID’s features make up most of the top 50%, so he seems to work well with other artists. Lastly, Kendrick Lamar’s features tend to lack streams, so maybe the label should encourage him to stick to solo work. 
 
 5. Where should we look for new talents? (Which location generates the most revenue)
+
+<img width="546" height="336" alt="Screenshot 2026-03-31 at 11 52 16 AM" src="https://github.com/user-attachments/assets/7f9a1b45-5d09-4371-b94d-d8ce4a4c36aa" />
 
 This query is meant to give insight on which cities generate the most revenue per artist. By joining many tables across the database, we can attach revenue values to all of the locations in our database. Additionally, dividing by artist creates less skewed data, as the cities with more artists will not be overrepresented. As seen in the results, Chapel Hill, Duluth, Houston, and Charleston have shown massive returns for their respective artists, so perhaps the culture and connections these artists can create in their cities can allow for similar artists from their area to develop and follow in their footsteps. Therefore, more resources should be given to talent scouts and local development in those areas. 
 
 6. Do pre or post 2000s albums generate the most sales?
 
+<img width="631" height="298" alt="Screenshot 2026-03-31 at 11 53 17 AM" src="https://github.com/user-attachments/assets/b7ef1888-3f3d-4822-9334-8771b2b58fd2" />
+
 This query displays the dichotomy of the revenue generated from albums before and after the year 2000. By using the UNION command, we can observe both calculations side by side. REGEXP was used to distinguish between albums made before and after the turn of the millennium. The results state that pre-2000s albums still have generated more money per album on average than post 2000s albums. This should alert management that they need to keep these albums available for purchase and to not phase them out. It would also be wise to renew contracts of artists that made music in the 1900s, as they not only drove up sales, but they have a positive reputation amongst the public. This isn’t to say that newer artists should not be prioritized, as their sales numbers are very close to those of the older albums, however management should not ignore the lasting impact that older works have created. 
 
 7. Which record label has released the most albums?
 
+<img width="381" height="365" alt="Screenshot 2026-03-31 at 11 54 13 AM" src="https://github.com/user-attachments/assets/ebf51dae-4ae5-4b6b-8524-a415cf00037e" />
+
 This query calculates the total number of albums released by each record label by joining the Album, Artist, and Record Label tables. It organizes the data by record label and counts the number of albums linked to each label, and then it arranges the results in descending order. This query assists management in determining which record labels are generating the most albums. Being able to identify which label is effectively, provides insight into overall label performance and market presence. This data can help make decisions about investments, resource distribution, and collaborations with successful labels.
 
 8. Which artists have more total album sales than the average total sales of all artists?
+
+<img width="573" height="261" alt="Screenshot 2026-03-31 at 11 55 08 AM" src="https://github.com/user-attachments/assets/e16dd246-b769-4725-94ef-c41de50c7d96" />
 
 This query calculates the total album sales for each artist by joining the Artist, Album, and Unit total tables. By comparing, each artist’s total sales to the average total sales across all artists using a subquery, it returns only those artists whose sales are higher than the average. This query assists management in determining artists who are exceeding average sales performance. These insights can help make decisions regarding marketing spending, resource distribution, contract extensions, and focusing on top-performing artists within the company.
 
 
 9. Which locations have a city name that ends with "ville" (REGEX)?
 
+<img width="389" height="250" alt="Screenshot 2026-03-31 at 11 55 42 AM" src="https://github.com/user-attachments/assets/2f3bb348-976d-4680-9969-cdc29801e541" />
+
 This query was created to pull a list of all cities in the Location table that ends with the letters "ville". To make the list clean and easy to read, I used a Regular Expression to find the pattern and grouped the results by city. This query helps filter through the location data more effectively. Instead of scrolling through rows of data, this helps identify specific areas based on their name. 
 
 10. Display producers who have never worked on a song in the Hip Hop genre (NOT EXISTS)
+
+<img width="365" height="227" alt="Screenshot 2026-03-31 at 11 55 53 AM" src="https://github.com/user-attachments/assets/cab4e401-7ade-4b19-b429-baddf7f38aee" />
+
 
 Query 10 is designed to find the names of producers in the Producer table who have never been associated with a "Hip Hop" song. To do this, I used a NOT EXISTS subquery to filter anyone linked to that specific genre. For every producer, the subquery checks the Song Producer table to see if they are linked to any song labeled 'Hip Hop'. If the subquery finds any match, NOT EXISTS becomes false, and that producer is excluded. This logic can be used to isolate producers who work exclusively in other genres like Country or Pop. It’s a great way to find a music producer whose specialty does not fall in Hip Hop. 
 
