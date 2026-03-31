@@ -1,7 +1,7 @@
 # MIST4610 - Project 1 - Group 5
 
 ## Team Members
-1. Caleb Rivers
+1. Caleb Rivers (https://github.com/CRivers2805/MIST_4610_21482_G5_CMR)
 2. Emmy Nguyen (https://github.com/emmyn1)
 3. Catherine Lusick (https://github.com/cl95728)
 4. Diyaa Patel (https://github.com/Diyaa-P13/MIST4610---Project-1-Group-5.git)
