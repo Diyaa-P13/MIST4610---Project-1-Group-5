@@ -4,7 +4,7 @@
 1. Caleb Rivers
 2. Emmy Nguyen (https://github.com/emmyn1)
 3. Catherine Lusick (https://github.com/cl95728)
-5. Diyaa Patel
+4. Diyaa Patel (https://github.com/Diyaa-P13/MIST4610---Project-1-Group-5.git)
 
 ## Project Description
 
